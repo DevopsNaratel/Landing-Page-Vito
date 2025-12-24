@@ -3,7 +3,7 @@ pipeline {
  
     environment { 
         // --- KONFIGURASI DOCKER --- 
-        DOCKER_IMAGE = 'diwamln/landingpage-vito'  
+        DOCKER_IMAGE = 'diwamln/landing-page-vito'  
         DOCKER_CREDS = 'docker-hub'  
          
         // --- KONFIGURASI GIT (REPO MANIFEST) --- 
@@ -12,8 +12,8 @@ pipeline {
          
         // --- PATH FILE MANIFEST --- 
         // Pastikan file deployment.yaml ini sudah ada di repo manifest Anda 
-        MANIFEST_TEST_PATH = 'landingpage-vito/dev/deployment.yaml' 
-        MANIFEST_PROD_PATH = 'landingpage-vito/prod/deployment.yaml'  
+        MANIFEST_TEST_PATH = 'landing-page-vito/dev/deployment.yaml' 
+        MANIFEST_PROD_PATH = 'landing-page-vito/prod/deployment.yaml'  
     } 
  
     stages { 
@@ -69,7 +69,7 @@ docker.io/${DOCKER_IMAGE}:${env.BASE_TAG}|g' ${MANIFEST_TEST_PATH}"
                             sh """ 
                                 git add . 
                                 if ! git diff-index --quiet HEAD; then 
-                                    git commit -m 'Deploy landingpage-vito: ${env.BASE_TAG} [skip 
+                                    git commit -m 'Deploy landing-page-vito: ${env.BASE_TAG} [skip 
 ci]' 
                                     git push origin main 
                                 else 
@@ -104,7 +104,7 @@ docker.io/${DOCKER_IMAGE}:${env.BASE_TAG}|g' ${MANIFEST_PROD_PATH}"
                             sh """ 
                                 git add . 
                                 if ! git diff-index --quiet HEAD; then 
-                                    git commit -m 'Promote landingpage-vito to PROD: 
+                                    git commit -m 'Promote landing-page-vito to PROD: 
 ${env.BASE_TAG} [skip ci]' 
                                     git push origin main 
                                 else 
