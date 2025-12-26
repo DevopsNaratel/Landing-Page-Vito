@@ -181,7 +181,7 @@ $skills = ["PHP", "JavaScript", "HTML/CSS", "MySQL", "Laravel"];
                 </div>
                 
                 <div class="section">
-                    <h3>Tentang guee</h3>
+                    <h3>Tentang guee nih</h3>
                     <p><?= $tentang ?></p>
                 </div>
                 
