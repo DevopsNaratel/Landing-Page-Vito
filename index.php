@@ -181,12 +181,12 @@ $skills = ["PHP", "JavaScript", "HTML/CSS", "MySQL", "Laravel"];
                 </div>
                 
                 <div class="section">
-                    <h3>Tentang Saya</h3>
+                    <h3>Tentang guee</h3>
                     <p><?= $tentang ?></p>
                 </div>
                 
                 <div class="section">
-                    <h3>Keahlian</h3>
+                    <h3>Keahlian gue</h3>
                     <div class="skills">
                         <?php foreach($skills as $skill): ?>
                             <span class="skill-tag"><?= $skill ?></span>
